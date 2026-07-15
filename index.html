@@ -22,21 +22,21 @@
             </div>
         </section>
             
-        <section class="gallery">
-            <div class="card" onclick="openModal(this, 'HOJA DE VIDA')"><img src="portadas/hoja_de_vida.png" alt="Hoja de Vida"></div>
-            <div class="card" onclick="openModal(this, 'SÍLABO')"><img src="portadas/silabo.png" alt="Sílabo"></div>
-            <div class="card" onclick="openModal(this, 'TRABAJOS INDIVIDUALES')"><img src="portadas/trabajos_individuales.png" alt="Trabajos Individuales"></div>
-            <div class="card" onclick="openModal(this, 'TRABAJOS GRUPALES')"><img src="portadas/trabajos_grupales.png" alt="Trabajos Grupales"></div>
-            <div class="card" onclick="openModal(this, 'Mapas Mentales')"><img src="portadas/mapas_mentales.png" alt="Mapas Mentales"></div>
-            <div class="card" onclick="openModal(this, 'INFORMES')"><img src="portadas/informes.png" alt="Informes"></div>
-            <div class="card" onclick="openModal(this, 'ENSAYOS')"><img src="portadas/ensayos.png" alt="Ensayos"></div>
-            <div class="card" onclick="openModal(this, 'PRUEBAS')"><img src="portadas/pruebas.png" alt="Pruebas"></div>
-            <div class="card" onclick="openModal(this, 'MATERIAL DEL AULA')"><img src="portadas/material_del_aula_virtual.png" alt="Material del Aula Virtual"></div>
-            <div class="card" onclick="openModal(this, 'SIMULADORES UTILIZADOS')"><img src="portadas/simuladores_utilizados.png" alt="Simuladores Utilizados"></div>
-            <div class="card" onclick="openModal(this, 'APUNTES DE LA MATERIA')"><img src="portadas/apuntes_de_materia.png" alt="Apuntes de Materia"></div>
-            <div class="card" onclick="openModal(this, 'Anexos')"><img src="portadas/anexos.png" alt="Anexos"></div>
-        </section>
-    </main>
+    <section class="gallery">
+        <div class="card" onclick="openModal(this, 'HOJA DE VIDA', 'https://drive.google.com/file/d/1RsrJZWJDWnNMabCdf4hXxJ2dTp74SbXw/view?usp=sharing')"><img src="portadas/hoja_de_vida.png" alt="Hoja de Vida"></div>
+        <div class="card" onclick="openModal(this, 'SÍLABO', 'https://drive.google.com/file/d/1haKHLvDRmssLPos0QU29VJXZkl9Oe-Dg/view?usp=sharing')"><img src="portadas/silabo.png" alt="Sílabo"></div>
+        <div class="card" onclick="openModal(this, 'TRABAJOS INDIVIDUALES', 'https://drive.google.com/file/d/17vN9IMDRaw67DwQgoM3FgfdnB-r6o5We/view?usp=sharing')"><img src="portadas/trabajos_individuales.png" alt="Trabajos Individuales"></div>
+        <div class="card" onclick="openModal(this, 'TRABAJOS GRUPALES', 'https://drive.google.com/file/d/1OKKLfipcuHLSr2QBB8csLfnmBl2K7tQr/view?usp=sharing')"><img src="portadas/trabajos_grupales.png" alt="Trabajos Grupales"></div>
+        <div class="card" onclick="openModal(this, 'MAPAS MENTALES', 'https://drive.google.com/file/d/1SXVOKTRuDN8_jAwcHAZOHohS5709Z890/view?usp=sharing')"><img src="portadas/mapas_mentales.png" alt="Mapas Mentales"></div>
+        <div class="card" onclick="openModal(this, 'INFORMES', 'https://drive.google.com/file/d/1GpnzAdeBE-_CJo9kA3KkrvhuZEBOdQkb/view?usp=sharing')"><img src="portadas/informes.png" alt="Informes"></div>
+        <div class="card" onclick="openModal(this, 'ENSAYOS', 'https://drive.google.com/file/d/1qhhBsX6T8fl0FEFBJ4n1y7P7-X00ZMf3/view?usp=sharing')"><img src="portadas/ensayos.png" alt="Ensayos"></div>
+        <div class="card" onclick="openModal(this, 'PRUEBAS', 'TU_LINK_AQUI')"><img src="portadas/pruebas.png" alt="Pruebas"></div>
+        <div class="card" onclick="openModal(this, 'MATERIAL DEL AULA', 'https://drive.google.com/file/d/19QB0FDHf001SUVZA2ISy8gFbFwg-o4sj/view?usp=sharing')"><img src="portadas/material_del_aula_virtual.png" alt="Material del Aula Virtual"></div>
+        <div class="card" onclick="openModal(this, 'SIMULADORES UTILIZADOS', 'https://drive.google.com/file/d/1JoclBN752sMyCxf4jxen_VmXh3ouuQ-W/view?usp=sharing')"><img src="portadas/simuladores_utilizados.png" alt="Simuladores Utilizados"></div>
+        <div class="card" onclick="openModal(this, 'APUNTES DE LA MATERIA', 'https://drive.google.com/file/d/1VBaEE70KtRKskRqBX8_3jtE6wSvucJWL/view?usp=sharing')"><img src="portadas/apuntes_de_materia.png" alt="Apuntes de Materia"></div>
+        <div class="card" onclick="openModal(this, 'Anexos', 'TU_LINK_AQUI')"><img src="portadas/anexos.png" alt="Anexos"></div>
+    </section>
+    </main>     
 
     <footer>
         <div class="footer-content">
@@ -61,26 +61,32 @@
         </div>
     </div>
 
-    <script>
-        const modal = document.getElementById("projectModal");
-        const modalImg = document.getElementById("modalImage");
-        const modalTitle = document.getElementById("modalTitle");
+<script>
+    const modal = document.getElementById("projectModal");
+    const modalImg = document.getElementById("modalImage");
+    const modalTitle = document.getElementById("modalTitle");
+    const btnDrive = document.querySelector(".btn-drive");
+    const linkUrl = document.querySelector(".link-url");
 
-        function openModal(element, title) {
-            modal.style.display = "flex";
-            modalTitle.innerText = title;
-            modalImg.src = element.querySelector('img').src; 
-        }
+    function openModal(element, title, url) {
+        modal.style.display = "flex";
+        modalTitle.innerText = title;
+        modalImg.src = element.querySelector('img').src;
+        
+        // Asignar el link dinámico
+        btnDrive.href = url;
+        linkUrl.innerText = url;
+    }
 
-        function closeModal() {
-            modal.style.display = "none";
-        }
+    function closeModal() {
+        modal.style.display = "none";
+    }
 
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                closeModal();
-            }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            closeModal();
         }
-    </script>
+    }
+</script>
 </body>
 </html>
