@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Física</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">PORTAFOLIO</div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <span class="tag">Universidad Central del Ecuador</span>
+            <h1>PORTAFOLIO DE<br><span class="highlight">FÍSICA</span></h1>
+            <p>Una colección estructurada de recursos, simuladores y trabajos académicos para el estudio profundo de las ciencias físicas.</p>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="window.scrollTo(0, document.querySelector('.gallery').offsetTop)">Explorar Trabajos</button>
+            </div>
+        </section>
+            
+        <section class="gallery">
+            <div class="card" onclick="openModal(this, 'HOJA DE VIDA')"><img src="portadas/hoja_de_vida.png" alt="Hoja de Vida"></div>
+            <div class="card" onclick="openModal(this, 'SÍLABO')"><img src="portadas/silabo.png" alt="Sílabo"></div>
+            <div class="card" onclick="openModal(this, 'TRABAJOS INDIVIDUALES')"><img src="portadas/trabajos_individuales.png" alt="Trabajos Individuales"></div>
+            <div class="card" onclick="openModal(this, 'TRABAJOS GRUPALES')"><img src="portadas/trabajos_grupales.png" alt="Trabajos Grupales"></div>
+            <div class="card" onclick="openModal(this, 'Mapas Mentales')"><img src="portadas/mapas_mentales.png" alt="Mapas Mentales"></div>
+            <div class="card" onclick="openModal(this, 'INFORMES')"><img src="portadas/informes.png" alt="Informes"></div>
+            <div class="card" onclick="openModal(this, 'ENSAYOS')"><img src="portadas/ensayos.png" alt="Ensayos"></div>
+            <div class="card" onclick="openModal(this, 'PRUEBAS')"><img src="portadas/pruebas.png" alt="Pruebas"></div>
+            <div class="card" onclick="openModal(this, 'MATERIAL DEL AULA')"><img src="portadas/material_del_aula_virtual.png" alt="Material del Aula Virtual"></div>
+            <div class="card" onclick="openModal(this, 'SIMULADORES UTILIZADOS')"><img src="portadas/simuladores_utilizados.png" alt="Simuladores Utilizados"></div>
+            <div class="card" onclick="openModal(this, 'APUNTES DE LA MATERIA')"><img src="portadas/apuntes_de_materia.png" alt="Apuntes de Materia"></div>
+            <div class="card" onclick="openModal(this, 'Anexos')"><img src="portadas/anexos.png" alt="Anexos"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <img src="portadas/bustos_2.png" alt="Imagen de Bustos" class="footer-img">
+            <p>&copy; 2026 Portafolio de Física - Universidad Central del Ecuador.</p>
+        </div>
+    </footer>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-img-container">
+                <img id="modalImage" src="" alt="Imagen de la sección">
+            </div>
+            <div class="modal-info drive-layout">
+                <h2 id="modalTitle">Título del Tema</h2>
+                <img src="portadas/Google-Drive-Simbolo.png" alt="Símbolo de la Nube" class="drive-icon">
+                <p class="link-demo">Enlace de acceso a los documentos:</p>
+                <code class="link-url">https://onedrive.live.com/tu-carpeta-universitaria</code>
+                <a href="https://onedrive.live.com/" target="_blank" class="btn btn-primary btn-drive">Abrir en OneDrive</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("projectModal");
+        const modalImg = document.getElementById("modalImage");
+        const modalTitle = document.getElementById("modalTitle");
+
+        function openModal(element, title) {
+            modal.style.display = "flex";
+            modalTitle.innerText = title;
+            modalImg.src = element.querySelector('img').src; 
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
