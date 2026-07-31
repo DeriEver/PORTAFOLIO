@@ -3,89 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Física</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Visor de Código - Examen Final</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">PORTAFOLIO</div>
+        <h1>Error conexion
+        </h1>
+        <p>Repositorio de código del estudiante: Johann Solís</p>
     </header>
 
-    <main>
-        <section class="hero">
-            <span class="tag">Universidad Central del Ecuador</span>
-            <h1>PORTAFOLIO DE<br><span class="highlight">FÍSICA</span></h1>
-            <p>Una colección estructurada de recursos, simuladores y trabajos académicos para el estudio profundo de las ciencias físicas.</p>
-            <div class="btn-container">
-                <button class="btn btn-primary" onclick="window.scrollTo(0, document.querySelector('.gallery').offsetTop)">Explorar Trabajos</button>
-            </div>
-        </section>
-            
-    <section class="gallery">
-        <div class="card" onclick="openModal(this, 'HOJA DE VIDA', 'https://drive.google.com/file/d/1RsrJZWJDWnNMabCdf4hXxJ2dTp74SbXw/view?usp=sharing')"><img src="portadas/hoja_de_vida.png" alt="Hoja de Vida"></div>
-        <div class="card" onclick="openModal(this, 'SÍLABO', 'https://drive.google.com/file/d/1haKHLvDRmssLPos0QU29VJXZkl9Oe-Dg/view?usp=sharing')"><img src="portadas/silabo.png" alt="Sílabo"></div>
-        <div class="card" onclick="openModal(this, 'TRABAJOS INDIVIDUALES', 'https://drive.google.com/file/d/17vN9IMDRaw67DwQgoM3FgfdnB-r6o5We/view?usp=sharing')"><img src="portadas/trabajos_individuales.png" alt="Trabajos Individuales"></div>
-        <div class="card" onclick="openModal(this, 'TRABAJOS GRUPALES', 'https://drive.google.com/file/d/1OKKLfipcuHLSr2QBB8csLfnmBl2K7tQr/view?usp=sharing')"><img src="portadas/trabajos_grupales.png" alt="Trabajos Grupales"></div>
-        <div class="card" onclick="openModal(this, 'MAPAS MENTALES', 'https://drive.google.com/file/d/1SXVOKTRuDN8_jAwcHAZOHohS5709Z890/view?usp=sharing')"><img src="portadas/mapas_mentales.png" alt="Mapas Mentales"></div>
-        <div class="card" onclick="openModal(this, 'INFORMES', 'https://drive.google.com/file/d/1GpnzAdeBE-_CJo9kA3KkrvhuZEBOdQkb/view?usp=sharing')"><img src="portadas/informes.png" alt="Informes"></div>
-        <div class="card" onclick="openModal(this, 'ENSAYOS', 'https://drive.google.com/file/d/1qhhBsX6T8fl0FEFBJ4n1y7P7-X00ZMf3/view?usp=sharing')"><img src="portadas/ensayos.png" alt="Ensayos"></div>
-        <div class="card" onclick="openModal(this, 'PRUEBAS', 'TU_LINK_AQUI')"><img src="portadas/pruebas.png" alt="Pruebas"></div>
-        <div class="card" onclick="openModal(this, 'MATERIAL DEL AULA', 'https://drive.google.com/file/d/19QB0FDHf001SUVZA2ISy8gFbFwg-o4sj/view?usp=sharing')"><img src="portadas/material_del_aula_virtual.png" alt="Material del Aula Virtual"></div>
-        <div class="card" onclick="openModal(this, 'SIMULADORES UTILIZADOS', 'https://drive.google.com/file/d/1JoclBN752sMyCxf4jxen_VmXh3ouuQ-W/view?usp=sharing')"><img src="portadas/simuladores_utilizados.png" alt="Simuladores Utilizados"></div>
-        <div class="card" onclick="openModal(this, 'APUNTES DE LA MATERIA', 'https://drive.google.com/file/d/1VBaEE70KtRKskRqBX8_3jtE6wSvucJWL/view?usp=sharing')"><img src="portadas/apuntes_de_materia.png" alt="Apuntes de Materia"></div>
-    </section>
-    </main>     
-
-    <footer>
-        <div class="footer-content">
-            <img src="portadas/bustos_2.png" alt="Imagen de Bustos" class="footer-img">
-            <p>&copy; 2026 Portafolio de Física - Universidad Central del Ecuador.</p>
-        </div>
-    </footer>
-
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <div class="modal-img-container">
-                <img id="modalImage" src="" alt="Imagen de la sección">
-            </div>
-            <div class="modal-info drive-layout">
-                <h2 id="modalTitle">Título del Tema</h2>
-                <img src="portadas/Google-Drive-Simbolo.png" alt="Símbolo de la Nube" class="drive-icon">
-                <p class="link-demo">Enlace de acceso a los documentos:</p>
-                <code class="link-url">https://onedrive.live.com/tu-carpeta-universitaria</code>
-                <a href="https://onedrive.live.com/" target="_blank" class="btn btn-primary btn-drive">Abrir en OneDrive</a>
-            </div>
-        </div>
-    </div>
-
-<script>
-    const modal = document.getElementById("projectModal");
-    const modalImg = document.getElementById("modalImage");
-    const modalTitle = document.getElementById("modalTitle");
-    const btnDrive = document.querySelector(".btn-drive");
-    const linkUrl = document.querySelector(".link-url");
-
-    function openModal(element, title, url) {
-        modal.style.display = "flex";
-        modalTitle.innerText = title;
-        modalImg.src = element.querySelector('img').src;
+    <main class="container">
         
-        // Asignar el link dinámico
-        btnDrive.href = url;
-        linkUrl.innerText = url;
-    }
+        <!-- SECCIÓN HTML -->
+        <section class="code-card">
+            <h2 class="neon-title neon-html">HTML</h2>
+            <p>Estructura de la página:</p>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Examen Final&lt;/title&gt;
+    &lt;link rel="stylesheet" href="estilo.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="contenedor-principal"&gt;
+        
+        &lt;header class="encabezado"&gt;
+            &lt;h1&gt;Título de la Materia / Examen&lt;/h1&gt;
+        &lt;/header&gt;
 
-    function closeModal() {
-        modal.style.display = "none";
-    }
+        &lt;nav class="navegacion"&gt;
+            &lt;a href="#"&gt;Enlace 1&lt;/a&gt; | &lt;a href="#"&gt;Enlace 2&lt;/a&gt;
+        &lt;/nav&gt;
 
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            closeModal();
-        }
+        &lt;main class="contenido"&gt;
+            &lt;h2&gt;Tema Principal&lt;/h2&gt;
+            &lt;p&gt;Aquí colocas los textos, descripciones o imágenes que pida el profesor.&lt;/p&gt;
+        &lt;/main&gt;
+
+        &lt;aside class="zona-formulario"&gt;
+            &lt;h3&gt;Registro&lt;/h3&gt;
+  
+            &lt;form action="php.php" method="POST"&gt;
+                &lt;input type="text" name="i1" placeholder="ID o Cédula (c1)" required&gt;
+                &lt;input type="text" name="i2" placeholder="Dato 2 (c2)"&gt;
+                &lt;input type="text" name="i3" placeholder="Dato 3 (c3)"&gt;
+                &lt;input type="text" name="i4" placeholder="Dato 4 (c4)"&gt;
+
+                &lt;button type="submit" name="btn" value="R"&gt;Registrar&lt;/button&gt;
+                &lt;button type="submit" name="btn" value="M"&gt;Modificar&lt;/button&gt;
+                &lt;button type="submit" name="btn" value="E"&gt;Eliminar&lt;/button&gt;
+                &lt;button type="submit" name="btn" value="C"&gt;Consultar&lt;/button&gt;
+        &lt;/aside&gt;
+
+        &lt;footer class="pie-pagina"&gt;
+            DATOS DEL ESTUDIANTE: Johann Solís
+        &lt;/footer&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </section>
+
+        <!-- SECCIÓN CSS -->
+        <section class="code-card">
+            <h2 class="neon-title neon-css">CSS</h2>
+            <p>Estilos de la interfaz:</p>
+            <pre><code>body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; padding: 10px; 
+}
+
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 7fr 3fr; 
+    grid-template-areas: 
+        "encabezado encabezado"
+        "navegacion navegacion"
+        "contenido zona-formulario" 
+        "pie pie";
+    gap: 15px;
+}
+
+.encabezado { 
+    grid-area: encabezado; 
+    background: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 15px;
+}
+
+.navegacion {
+    grid-area: navegacion; 
+    background: #666; 
+    color: white; 
+    text-align: center; 
+    padding: 10px;
+}
+.contenido { 
+    grid-area: contenido; 
+    background: #eee; 
+    padding: 15px; 
+}
+
+.zona-formulario { 
+    grid-area: zona-formulario; 
+    background: #ddd; 
+    padding: 15px; 
+}
+.pie-pagina { 
+    grid-area: pie; 
+    background: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+}
+
+input, select, button { 
+    display: block; 
+    width: 100%; 
+    margin-bottom: 10px; 
+    padding: 8px; 
+    box-sizing: border-box; 
+}</code></pre>
+        </section>
+
+        <!-- SECCIÓN PHP -->
+        <section class="code-card">
+            <h2 class="neon-title neon-php">PHP</h2>
+            <p>Lógica de conexión y CRUD:</p>
+            <pre><code>&lt;?php
+$conexion = new mysqli("localhost", "root", "", "base_examen");
+
+$i1 = $_POST['i1'] ?? '';
+$i2 = $_POST['i2'] ?? '';
+$i3 = $_POST['i3'] ?? '';
+$i4 = $_POST['i4'] ?? '';
+$btn = $_POST['btn'] ?? '';
+
+
+if ($btn == 'R') {
+    $conexion-&gt;query("INSERT INTO tabla VALUES ('$i1', '$i2', '$i3', '$i4')");
+    echo "Registrado";
+}
+
+if ($btn == 'M') {
+    $conexion-&gt;query("UPDATE tabla SET c2='$i2', c3='$i3', c4='$i4' WHERE c1='$i1'");
+    echo "Modificado";
+}
+
+if ($btn == 'E') {
+    $conexion-&gt;query("DELETE FROM tabla WHERE c1='$i1'");
+    echo "Eliminado";
+}
+
+if ($btn == 'C') {
+    $resultado = $conexion-&gt;query("SELECT * FROM tabla WHERE c1='$i1'");
+    foreach ($resultado as $fila) {
+        echo "Encontrado: " . $fila['c2'] . " | " . $fila['c3'] . " | " . $fila['c4'];
     }
-</script>
+}
+?&gt;</code></pre>
+        </section>
+
+        <!-- SECCIÓN SQL -->
+        <section class="code-card">
+            <h2 class="neon-title neon-sql">SQL</h2>
+            <p>Creación de base de datos y tabla:</p>
+            <pre><code>CREATE DATABASE base_examen;
+USE base_examen;
+
+CREATE TABLE tabla (
+    c1 VARCHAR(50) PRIMARY KEY, 
+    c2 VARCHAR(150),            
+    c3 VARCHAR(150),           
+    c4 VARCHAR(150)             
+);</code></pre>
+        </section>
+
+    </main>
+
 </body>
 </html>
